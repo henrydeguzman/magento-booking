@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Actino_Booking>
+			<version>0.0.1</version>
+		</Actino_Booking>
+	</modules>
+
+	<global>
+		<blocks>
+			<booking>
+				<class>Actino_Booking_Block</class>
+			</booking>
+		</blocks>
+		<models>
+			<booking>
+				<class>Actino_Booking_Model</class>
+			</booking>
+		</models>
+	</global>
+
+	<adminhtml>
+		<layout>
+			<updates>
+				<booking>
+					<file>booking.xml</file>
+				</booking>
+			</updates>
+		</layout>
+		<events>
+			<catalog_product_save_after>
+				<observers>
+					<actino_save_product_data>
+						<type>singleton</type>
+						<class>booking/observer</class>
+						<method>saveProductTabData</method>
+					</actino_save_product_data>
+				</observers>
+			</catalog_product_save_after>
+		</events>
+	</adminhtml>
+</config>

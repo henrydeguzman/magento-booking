@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Actino_Booking>
+			<active>false</active>
+			<codePool>local</codePool>
+		</Actino_Booking>
+	</modules>
+</config>

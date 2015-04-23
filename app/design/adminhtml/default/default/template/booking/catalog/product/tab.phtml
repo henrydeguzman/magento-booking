@@ -1,0 +1,136 @@
+<?php
+/*
+ this is custom tab template
+*/
+
+ ?>
+
+ <div class="entry-edit">
+ 	<div class="entry-edit-head">
+ 		<h4 class="icon-head head-edit-form fieldset-legend">Booking and Reservation</h4>
+ 	</div>
+ 	<fieldset>
+ 		<div align="center" class="dropdown-container">
+ 			<select class="dropdown-menu" id="select_booking_type">
+ 				<option>Please select Booking Type</option>
+ 				<option value="0">Disable</option>
+ 				<option value="1">Many Booking in a day</option>
+ 				<option value="2">One booking for many days</option>
+ 			</select>
+
+
+ 			<div class="field-divider"></div>
+ 			<div id="date_from_to" class="display-none">
+ 				<div class="InputAddOn">
+ 					<label for="date_from"><?php echo $this->__('Select From Date:')?></label>
+ 					<input class="InputAddOn-field" id="date_from" name="date_from" disabled="disabled">
+ 					<button class="InputAddOn-item" id="date_from_trig">Date</button>
+ 				</div>
+ 				<div class="InputAddOn">
+ 					<lable for="date_to"><?php echo $this->__('Select to Date:')?></lable>
+ 					<input class="InputAddOn-field" id="date_to" name="date_to" disabled="disabled">
+ 					<button class="InputAddOn-item" id="date_to_trig">Date</button>
+ 				</div>
+ 				<div class="field-divider"></div>
+ 			</div>
+ 			
+ 		</div>
+
+ 		<div id="for_many_booking_in_a_day" class="display-none">
+ 			<table>
+ 				<tr>
+ 					<td width="130px"><label for="b_time_slot"><?php echo $this->__('Booking Time Slot:')?></label></td>
+ 					<td><input type="text" name="b_time_slot" id="b_time_slot" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_buffer_cache_time_after_each_booking"><?php echo $this->__('Buffer cache time after each booking:')?></label></td>
+ 					<td><input type="text" name="b_buffer_cache_time_after_each_booking" id="b_buffer_cache_time_after_each_booking" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_sun_start_time"><?php echo $this->__('Sunday Start Time:')?></label></td>
+ 					<td><input type="text" name="b_sun_start_time" id="b_sun_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_sun_end_time"><?php echo $this->__('Sunday End Time:')?></label></td>
+ 					<td><input type="text" name="b_sun_end_time" id="b_sun_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_mon_start_time"><?php echo $this->__('Monday Start Time:')?></label></td>
+ 					<td><input type="text" name="b_mon_start_time" id="b_mon_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_mon_end_time"><?php echo $this->__('Monday End Time:')?></label></td>
+ 					<td><input type="text" name="b_mon_end_time" id="b_mon_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_tue_start_time"><?php echo $this->__('Tuesday Start Time')?></label></td>
+ 					<td><input type="text" name="b_tue_start_time" id="b_tue_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_tue_end_time"><?php echo $this->__('Tuesday End Time:')?></label></td>
+ 					<td><input type="text" name="b_tue_end_time" id="b_tue_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_wed_start_time"><?php echo $this->__('Wednesday Start Time:')?></label></td>
+ 					<td><input type="text" name="b_wed_start_time" id="b_wed_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_wed_end_time"><?php echo $this->__('Wednesday End Time:')?></label></td>
+ 					<td><input type="text" name="b_wed_end_time" id="b_wed_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_thu_start_time"><?php echo $this->__('Thursday Start Time:')?></label></td>
+ 					<td><input type="text" name="b_thu_start_time" id="b_thu_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_thu_end_time"><?php echo $this->__('Thursday End Time:')?></label></td>
+ 					<td><input type="text" name="b_thu_end_time" id="b_thu_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_fri_start_time"><?php echo $this->__('Friday Start Time')?></label></td>
+ 					<td><input type="text" name="b_fri_start_time" id="b_fri_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_fri_end_time"><?php echo $this->__('Friday End Time:')?></label></td>
+ 					<td><input type="text" name="b_fri_end_time" id="b_fri_end_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_sat_start_time"><?php echo $this->__('Saturday Start Time:')?></label></td>
+ 					<td><input type="text" name="b_sat_start_time" id="b_sat_start_time" class="input-text" /></td>
+ 				</tr>
+ 				<tr>
+ 					<td><label for="b_sat_end_time"><?php echo $this->__('Saturday End Time:')?></label></td>
+ 					<td><input type="text" name="b_sat_end_time" id="b_sat_end_time" class="input-text" /></td>
+ 				</tr>
+
+ 			</table>
+ 			
+ 		</div>
+ 		<div id="for_one_booking_for_many_days" class="display-none">
+ 			<div class="align-center">
+ 				<button type="button" id="addbookings" title="<?php echo $this->__('Add Bookings')?>"><span><?php echo $this->__('Add Bookings')?></span></button>
+ 			</div>
+ 			<div class="booking-container">
+ 			
+ 			</div>
+ 		</div>
+ 	</fieldset>
+ </div>
+
+ <script type="text/javascript">// <![CDATA[
+ 	Calendar.setup({
+ 		inputField : 'date_from',
+ 		ifFormat : '%m/%e/%y',
+ 		button : 'date_from_trig',
+ 		align : 'Bl',
+ 		singleClick : true
+ 	});
+
+ 	Calendar.setup({
+ 		inputField : 'date_to',
+ 		ifFormat : '%m/%e/%y',
+ 		button : 'date_to_trig',
+ 		align : 'Bl',
+ 		singleClick : true
+ 	});
+ 	// ]]></script>

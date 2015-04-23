@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<layout>
+	<adminhtml_catalog_product_edit>
+		<reference name="product_tabs">
+			<action method="addTab">
+				<name>booking_tab</name>
+				<block>booking/adminhtml_catalog_product_tab</block>
+			</action>
+		</reference>
+		<reference name="head">
+
+			<!-- jquery -->
+			<action method="addJs" name="jquery" as="jquery">
+				<script>booking/jquery-2.1.3.min.js</script>
+			</action>
+			<!-- bootstrap js -->
+			<action method="addJs">
+				<script>booking/bootstrap.min.js</script>
+			</action>
+		
+			<!-- end bootstrap include js -->
+
+			
+			<!-- bootstrap css -->
+			<!-- <action method="addCss"><name>booking/bootstrap/css/bootstrap.min.css</name></action>
+			<action method="addCss"><name>booking/bootstrap/css/bootstrap-theme.min.css</name></action>
+			
+ -->
+
+ 			<!-- Custom style css -->
+ 			<action method="addCss"><name>booking/css/booking.css</name></action>
+			
+			<!-- no conflict for prototype -->
+			<action method="addJs">
+				<script>booking/noconflict.js</script>
+			</action>
+
+			<!-- external custom js -->
+			<action method="addJs">
+				<script>booking/catalog/catalog.js</script>
+			</action>
+
+		</reference>
+	</adminhtml_catalog_product_edit>
+
+	<adminhtml_catalog_product_new>
+		<reference name="product_tabs">
+			<action method="addTab">
+				<name>booking_tab</name>
+				<block>booking/adminhtml_catalog_product_tab</block>
+			</action>
+		</reference>
+		
+	</adminhtml_catalog_product_new>
+	
+
+	
+</layout>
